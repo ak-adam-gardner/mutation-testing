@@ -1,3 +1,39 @@
+# Mutation testing
+Testing legacy code, using code coverage and mutation testing
+
+> ======================================
+> Gilded Rose Requirements Specification
+> ======================================
+> 
+> Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a
+> prominent city ran by a friendly innkeeper named Allison. We also buy and sell only the finest goods.
+> Unfortunately, our goods are constantly degrading in quality as they approach their sell by date. We
+> have a system in place that updates our inventory for us. It was developed by a no-nonsense type named
+> Leeroy, who has moved on to new adventures.
+
+This introduction, and this Kata is taken from [emilybache](https://github.com/emilybache/GildedRose-Refactoring-Kata) and this Kata was originally created by [Terry Hughes](https://github.com/NotMyself/GildedRose)
+
+i've merely taken the above repository and incorporated coverage reporting and mutation testing. Feel free to check out the originals and undertake your own approach. 
+
+
+Getting Started
+---------------
+
+To begin the kata, install the requirements below then run:
+
+```
+composer install
+```
+
+to run unit tests:
+```
+composer test
+```
+to generate test coverage report:
+```
+composer test-coverage
+``` 
+
 Requirements
 ------------
 
@@ -15,37 +51,11 @@ Composer is PHP's main package and dependency management tool.
 
 It can be downloaded here: https://getcomposer.org/download/
 
-Getting Started
----------------
-
-To begin the kata, install the dependencies and run `phpunit`:
+**Xdebug:**
+Xdebug was required to successfully run code coverage commands
 
 ```
-cd php7
-composer install
-vendor/bin/phpunit
+pecl install xdebug
 ```
 
-If the "install" command does not work, try running `composer update` instead.
-This will tell composer that it has permission to look for a newer version of
-its dependencies.
-
-If things are still not cooperating, you can try this extreme approach:
-
-```
-composer remove phpunit/phpunit
-composer require phpunit/phpunit
-```
-
-To exercise the code outside of phpunit, for example to visually confirm that it is working,
-use the `texttest_fixture` script:
-
-```
-php fixtures/texttest_fixture.php
-```
-
-Tips
-----
-
-PHPUnit has a very thorough reference manual. It would be particularly useful to explore the
-[Data Providers](https://phpunit.readthedocs.io/en/8.1/writing-tests-for-phpunit.html#data-providers) section.
+article about this here: https://medium.com/yish/xdebug-on-php7-3-laravel-valet-with-homebrew-6ad1a7c3c1ad
