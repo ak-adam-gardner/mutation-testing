@@ -11,11 +11,12 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": [
-            "vendor/bin/phpunit --coverage-html reports/",
-            "open -a \"Google Chrome\" reports/index.html"
+            "vendor/bin/phpunit --coverage-html reports/coverage",
+            "open -a \"Google Chrome\" reports/coverage/index.html"
         ],
         "test-infection": [
-            "infection.phar --initial-tests-php-options=\"-d zend_extension=xdebug.so\""
+            "vendor/bin/infection",
+            "open -a \"Google Chrome\" reports/infection/infection.log"
         ]
     },
     "require": {

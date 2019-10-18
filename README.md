@@ -16,6 +16,13 @@ This introduction, and this Kata is taken from [emilybache](https://github.com/e
 i've merely taken the above repository and incorporated coverage reporting and mutation testing. Feel free to check out the originals and undertake your own approach. 
 
 
+The challenge
+---------------
+
+To refactor the code following the [requirements](GildedRoseRequirements.txt).
+
+My recommended approach for this as a learning tool for mutation testing is to start by testing core functionality with code coverage, then refactor using TDD and improve the tests with mutation. 
+
 Getting Started
 ---------------
 
@@ -32,6 +39,11 @@ composer test
 to generate test coverage report:
 ```
 composer test-coverage
+``` 
+
+to run infection mutation scripts:
+```
+composer test-infection
 ``` 
 
 Requirements
